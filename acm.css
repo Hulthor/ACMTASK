@@ -1,0 +1,543 @@
+body, html
+{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato" ,sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+    overflow-x: hidden;
+}
+
+#loader
+{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: visible;
+    background: url(untitled.png) no-repeat center center;
+}
+
+#menu{
+	width: 35px;
+	height: 30px;
+	margin: 30px 0 20px 20px;
+	cursor: pointer;
+    
+}
+.bar{
+	height: 5px;
+	width: 100%;
+	background-color: white;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
+    display: none;
+}
+#bar1{
+	transform: translateY(-4px);
+}
+#bar3{
+	transform: translateY(4px);
+}
+.nav li a{
+	color: #fff;
+    font-family: "Comic san MS" , sans-serif ;
+    font-size: 20px;
+    font-weight: bold;
+	text-decoration: none;
+    display: b;
+}
+.nav li a:hover{
+	color: lightgray;
+}
+.nav li{
+	list-style: none;
+	padding: 16px 0;
+}
+.nav{
+	padding: 0;
+	margin: 0 20px;
+	transition: 0.3s ease;
+	display: none;
+}
+.menu-bg, #menu-bar{
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+.menu-bg{
+	z-index: 1;
+	width: 0;
+	height: 0;
+	margin: 30px 0 20px 20px;
+	background: radial-gradient(circle,black,black);
+	border-radius: 50%;
+	transition: 0.3s ease;
+}
+#menu-bar{
+	z-index: 2;	
+}
+.change-bg{
+	width: 550px;
+	height: 540px;
+	transform: translate(-60%,-30%);
+}
+.change .bar{
+	background-color: white;
+}
+.change #bar1{
+	transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+	transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+	opacity: 0;
+}
+.change{
+	display: block;
+}
+
+.nav1
+{
+     font-family: "Comic san MS" , sans-serif ;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav1 *
+{
+    box-sizing: border-box;
+    transition: all 0.35s ease;
+}
+
+.nav1 li
+{
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 1em;
+    padding: 0;
+}
+
+.nav1 a
+{
+    padding: .5em 0.8em;
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav1 a:before,.nav1 a:after
+{
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    content: '';
+    transition: all 0.35s ease;
+    opacity: 0;
+}
+
+.nav1 a:before
+{
+    right: 0;
+    top: 0;
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+    transform: translate(-100%,50%);
+}
+
+.nav1 a:after
+{
+    left: 0;
+    bottom: 0;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: translate(100%,-50%);
+}
+
+a:hover:before,a:hover:after
+{
+    transform: translate(0%,0%);
+    opacity: 1;
+}
+
+.pimg1, .pimg2,.pimg3
+{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.pimg1
+{
+    background-image: url(apple-devices-artificial-flowers-business-196658.jpg);
+    min-height: 100%;
+}
+
+.pimg2
+{
+    background-image: url(achievement-adult-book-1181671.jpg);
+    min-height: 400px;
+}
+
+.pimg3
+{
+    background-image: url(luca-bravo-217276-unsplash.jpg);
+    min-height: 400px;
+}
+
+.section
+{
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light
+{
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark
+{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext
+{
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border
+{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.clock
+{
+    height: 2em;
+    width: 2em;
+    font-size: 20vmin;
+    color: #FFF;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+}
+
+.clock:before, .clock:after
+{
+    content: '';
+    height: 0.1em;
+    width: 0.1em;
+    border-radius: 50%;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    box-shadow: -0.1em -0.1em currentcolor, 2em -0.1em  currentcolor,-.1em 2em currentcolor, 2em 2em currentcolor;
+}
+.clock:after
+{
+    transform: rotate(45deg);
+    transform-origin: 1em 1em;
+    opacity: 0.5;
+}
+
+.hand
+{
+    display: block;
+    width: .2em;
+    height: 1em;
+    border-radius: .2em;
+    background-color: currentColor;
+    position: absolute;
+    bottom: 50%;
+    left:50%;
+    margin: 0 -.1em -.1em;
+    transform-origin: center calc(100% - .1em);
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.48,0.07,0.5,1.4);
+    animation-iteration-count: infinite;
+}
+
+.hour
+{
+    opacity: .8;
+    height: .6em;
+    animation-name: hour-move;
+}
+
+.minute
+{
+    animation-name: minute-move;
+    animation-duration: 1s;
+}
+
+@keyframes minute-movex
+{
+    0%
+    {
+        transform: rotate(0turn);
+    }
+    
+    90%, 100%
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes minute-move
+{
+    0%, 5%
+    {
+        transform: rotate(0turn);
+    }
+    
+    90%
+    {
+        transform: rotate(1.0001turn);
+        animation-timing-function: cubic-bezier(0.9,0,0.1,1);
+    }
+    100%
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes hour-move
+{
+    0%
+    {
+        transform: rotate(0turn);
+    }
+    
+    25%
+    {
+        transform: rotate(0.25turn);
+    }
+    
+    50%
+    {
+        transform: rotate(0.5turn);
+    }
+    
+    75%
+    {
+        transform: rotate(0.75turn);
+    }
+    100%
+    {
+        transform: rotate(1turn);
+    }
+    
+}
+
+*, *:before, *:after
+{
+    box-sizing: border-box;
+    position: relative;
+}
+
+.box
+{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.box span
+{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-bottom: 5px solid #fff;
+    border-right: 5px solid #fff;
+    margin: -10px;
+    transform: rotate(45deg);
+    animation: animate 2s infinite;
+}
+
+.box span:nth-child(2)
+{
+    animation-delay: -0.2s;
+}
+.box span:nth-child(3)
+{
+    animation-delay: -0.4s;
+}
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+    transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 78%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+}
+.btn{
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #111;
+  overflow: hidden;
+  position: relative;
+}
+.btn i{
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+.btn:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #111;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes aaa {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
+}
+
+@media only screen and (max-width: 700px)
+{
+   .middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+} 
+    
+    .btn{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #111;
+  overflow: hidden;
+  position: relative;
+}
+.btn i{
+  line-height: 50px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+    body, html
+{
+    height: 100%;
+    margin: 0;
+    font-size: 12px;
+    font-family: "Lato" ,sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+    overflow-x: hidden;
+}
+
+    .boss
+    {
+        position: absolute;
+        top: 20%;
+        left: 1%;
+        display: none;
+    }
+    .clock
+{
+    display: none;
+}
+    .border
+    {
+       position: absolute;
+       left: 60%;
+       font-size: 22px;
+       padding: 10px;
+    }
+    .box span
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    margin: -10px;
+    transform: rotate(45deg);
+    animation: animate 2s infinite;
+}
+    .nav1
+    {
+        display: none;
+    }
+.bar{
+	height: 5px;
+	width: 100%;
+	background-color: white;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
+    
+}
+    
+}
